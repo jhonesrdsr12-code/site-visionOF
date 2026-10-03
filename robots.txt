@@ -1,0 +1,12 @@
+# VISION.TREKKING — Robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://visiontrekking.com/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 10
+
+# Disallow admin/private paths (none for static site)
+# Disallow: /admin/
+# Disallow: /private/

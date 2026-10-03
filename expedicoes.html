@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VISION.TREKKING — Arquivo completo de expedições por localização. Expedições solitárias pelas serras, travessias e cachoeiras de Minas Gerais.">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Expedições — VISION.TREKKING</title>
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Expedições — VISION.TREKKING">
+  <meta property="og:description" content="Arquivo completo de expedições por localização.">
+  <meta property="og:image" content="images/og-default.webp">
+  <meta property="og:url" content="https://visiontrekking.com/expedicoes.html">
+  
+  <link rel="preload" as="style" href="css/main.css">
+  <link rel="preload" as="script" href="js/main.js">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+  <header id="header" class="header" role="banner">
+    <div class="header-inner container">
+      <a href="/" class="logo" aria-label="VISION.TREKKING — Início">VISION<span>.</span>TREKKING</a>
+      <nav id="nav" class="nav" role="navigation" aria-label="Navegação principal">
+        <a href="/" class="nav-link" data-i18n="nav.portfolio">Portfólio</a>
+        <a href="/expedicoes.html" class="nav-link" data-i18n="nav.expeditions" aria-current="page">Expedições</a>
+        <a href="/sobre.html" class="nav-link" data-i18n="nav.about">Sobre</a>
+        <a href="#contact" class="nav-link nav-cta" data-i18n="nav.contact">Contato</a>
+      </nav>
+      <div class="lang-selector">
+        <button class="lang-btn" aria-expanded="false" aria-haspopup="listbox" aria-label="Idioma">
+          <span id="lang-current">Português</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="lang-dropdown" role="listbox">
+          <a href="#" data-lang="pt" role="option" aria-current="true" data-i18n="lang.pt">Português</a>
+          <a href="#" data-lang="en" role="option" data-i18n="lang.en">English</a>
+          <a href="#" data-lang="es" role="option" data-i18n="lang.es">Español</a>
+        </div>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </div>
+    <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+  </header>
+  
+  <main id="main" role="main">
+    <header class="expeditions-header" aria-labelledby="expeditions-title">
+      <div class="container">
+        <h1 id="expeditions-title" class="expeditions-title" data-i18n="expeditions.title">Expedições</h1>
+        <p class="expeditions-subtitle" data-i18n="expeditions.subtitle">Arquivo completo por localização.</p>
+      </div>
+    </header>
+    
+    <section class="expeditions-grid" aria-labelledby="expeditions-title">
+      <div class="container">
+        <div class="expeditions-filters" role="group" aria-label="Filtrar expedições">
+          <button class="filter-btn active" data-filter="all" data-i18n="expeditions.filterAll">Todas</button>
+          <button class="filter-btn" data-filter="drone" data-i18n="expeditions.filterDrone">Drone</button>
+          <button class="filter-btn" data-filter="cachoeira" data-i18n="expeditions.filterCachoeira">Cachoeiras</button>
+          <button class="filter-btn" data-filter="trilha" data-i18n="expeditions.filterTrilha">Trilhas</button>
+          <button class="filter-btn" data-filter="pico" data-i18n="expeditions.filterPico">Picos</button>
+        </div>
+        
+        <div id="expeditions-grid" role="list" aria-label="Expedições">
+          <div class="masonry grid-sm" role="list"></div>
+        </div>
+        
+        <div class="load-more">
+          <button id="load-more" class="btn btn-outline" data-i18n="expeditions.loadMore" style="display: none;">Carregar mais</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer id="footer" class="footer" role="contentinfo">
+    <div class="footer-grid container">
+      <div class="footer-brand">
+        <p class="footer-logo">VISION<span>.</span>TREKKING</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Fotografia de natureza em sua forma mais crua.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <a href="/" data-i18n="nav.portfolio">Portfólio</a>
+        <a href="/expedicoes.html" data-i18n="nav.expeditions">Expedições</a>
+        <a href="/sobre.html" data-i18n="nav.about">Sobre</a>
+        <a href="#contact" data-i18n="nav.contact">Contato</a>
+      </nav>
+      <div class="footer-social" aria-label="Redes sociais">
+        <a href="https://instagram.com/vision.trekking" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://500px.com/visiontrekking" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="500px">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </a>
+        <a href="mailto:contato@visiontrekking.com" class="social-link" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p data-i18n="footer.rights">Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  
+  <script src="js/main.js" type="module"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+</body>
+</html>
