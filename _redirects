@@ -1,23 +1,9 @@
-# VISION.TREKKING — Cloudflare Pages Redirects
-# Place in site/_redirects for automatic deployment
-
-# Clean URLs (remove .html)
-/expedicoes /expedicoes.html 200
-/sobre /sobre.html 200
-
-# Trailing slash normalization
-/expedicoes/ /expedicoes 301
-/sobre/ /sobre 301
-
-# Legacy/alternative paths
+# Redirecionamentos de rotas antigas/alternativas
 /portfolio / 301
 /expeditions /expedicoes 301
 /about /sobre 301
 /contact /#contact 301
 
-# Language redirects (optional - if using subdirectory i18n)
-# /en/* /:splat 200
-# /es/* /:splat 200
-
-# SPA fallback (not needed for static site, but safe)
-/* /index.html 200
+# Normalização de barras no final (opcional, mas seguro)
+/expedicoes/ /expedicoes 301
+/sobre/ /sobre 301
